@@ -1,0 +1,585 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXRadioButton?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import com.jfoenix.controls.JFXTimePicker?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="457.0" prefWidth="678.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hotelms.FXMLDocumentController">
+   <children>
+      <ImageView accessibleRole="BUTTON" fitHeight="470.0" fitWidth="705.0" layoutX="-2.0" opacity="0.83" pickOnBounds="true" preserveRatio="true" style="-fx-scale-y: 1;">
+         <image>
+            <Image url="@../images/hotel.jpg" />
+         </image>
+      </ImageView>
+      <Label accessibleRole="BUTTON" cache="true" layoutX="147.0" layoutY="210.0" prefHeight="38.0" prefWidth="376.0" text="Well Come to Hotel  Bangladesh">
+         <font>
+            <Font size="26.0" />
+         </font>
+         <textFill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop color="#61003e" />
+                  <Stop color="WHITE" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </textFill>
+      </Label>
+      <Button fx:id="Admin" layoutX="33.0" layoutY="34.0" mnemonicParsing="false" onAction="#admainButton" prefHeight="54.0" prefWidth="134.0" style="-fx-background-color: white;" text="Authority" />
+      <Button fx:id="Customar" focusTraversable="false" layoutX="515.0" layoutY="34.0" mnemonicParsing="false" onAction="#CustomarButton" prefHeight="54.0" prefWidth="134.0" style="-fx-background-color: white;" text="Customar" />
+      <AnchorPane fx:id="id1" layoutX="27.0" layoutY="131.0" opacity="0.8" prefHeight="231.0" prefWidth="510.0" style="-fx-background-color: lightgray;" visible="false">
+         <children>
+            <AnchorPane layoutY="-1.0" prefHeight="47.0" prefWidth="510.0" style="-fx-background-color: #00264d;">
+               <children>
+                  <Label layoutX="164.0" layoutY="14.0" text="Admin LogIn" textFill="#fcf8f8">
+                     <font>
+                        <Font name="System Bold" size="29.0" />
+                     </font></Label>
+                  <ImageView fitHeight="21.0" fitWidth="21.0" layoutX="10.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/i13.png" />
+                     </image>
+                  </ImageView>
+               </children></AnchorPane>
+            <AnchorPane fx:id="adlg" layoutY="56.0" prefHeight="184.0" prefWidth="510.0" style="-fx-background-color: #00264d;">
+               <children>
+                  <JFXTextField fx:id="AdminUserNmae2" accessibleRole="IMAGE_VIEW" focusColor="#00ff37" layoutX="208.0" layoutY="17.0" promptText="Example@gmail.com" unFocusColor="WHITE">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font></JFXTextField>
+                  <JFXButton fx:id="adlog" buttonType="RAISED" layoutX="293.0" layoutY="120.0" onAction="#adlogIn" ripplerFill="#004dff" text="Log In" textFill="#fdfffd" />
+                  <JFXButton fx:id="adexit" buttonType="RAISED" layoutX="146.0" layoutY="120.0" onAction="#adexitbutton" prefHeight="25.0" prefWidth="65.0" ripplerFill="#004dff" text="Sing Up" textFill="WHITE">
+                     <font>
+                        <Font size="11.0" />
+                     </font></JFXButton>
+                  <ImageView fitHeight="21.0" fitWidth="24.0" layoutX="143.0" layoutY="23.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/i.jpg" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="25.0" fitWidth="42.0" layoutX="141.0" layoutY="66.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/i2.png" />
+                     </image>
+                  </ImageView>
+                  <JFXPasswordField fx:id="AdminUserpassword2" focusColor="#00ff11" layoutX="208.0" layoutY="66.0" promptText="Password" unFocusColor="WHITE">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font></JFXPasswordField>
+               </children></AnchorPane>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="id2" layoutX="70.0" layoutY="132.0" prefHeight="227.0" prefWidth="452.0" visible="false">
+         <children>
+            <AnchorPane layoutX="-1.0" layoutY="-1.0" opacity="0.79" prefHeight="59.0" prefWidth="453.0" style="-fx-background-color: #00264d;">
+               <children>
+                  <Label fx:id="customarln" layoutX="131.0" layoutY="8.0" text="Customar Log In" textFill="#56ffb0">
+                     <font>
+                        <Font name="System Bold" size="29.0" />
+                     </font></Label>
+                  <JFXButton fx:id="Customarback" layoutX="10.0" layoutY="12.0" onAction="#CustomarBacktoButton" text=" " textFill="WHITE">
+                     <graphic>
+                        <ImageView fitHeight="21.0" fitWidth="21.0" pickOnBounds="true" preserveRatio="true" rotate="180.0">
+                           <image>
+                              <Image url="@../images/i13.png" />
+                           </image>
+                        </ImageView>
+                     </graphic></JFXButton>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="-1.0" layoutY="58.0" opacity="0.8" prefHeight="170.0" prefWidth="453.0" style="-fx-background-color: #00264d;">
+               <children>
+                  <JFXTextField fx:id="Customarusername2" focusColor="#00ff2f" layoutX="156.0" layoutY="20.0" promptText="Example@gmail.com" unFocusColor="WHITE">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font></JFXTextField>
+                  <JFXButton fx:id="clogin" buttonType="RAISED" layoutX="251.0" layoutY="113.0" onAction="#cloginbuttons" text="Log In" textFill="WHITE" />
+                  <JFXButton fx:id="customerexit" buttonType="RAISED" layoutX="114.0" layoutY="113.0" onAction="#CustomarExitButton" ripplerFill="#1eff00" text="Sing Up" textFill="WHITE" />
+                  <ImageView fitHeight="21.0" fitWidth="21.0" layoutX="101.0" layoutY="22.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/i.jpg" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="23.0" fitWidth="25.0" layoutX="100.0" layoutY="62.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/i2.png" />
+                     </image>
+                  </ImageView>
+                  <JFXPasswordField fx:id="Customarpasswordtest2" focusColor="#00ff37" layoutX="159.0" layoutY="61.0" promptText="Password" unFocusColor="WHITE">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font></JFXPasswordField>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="wellcomead" layoutX="22.0" layoutY="122.0" prefHeight="193.0" prefWidth="275.0" style="-fx-background-color: black;" visible="false">
+         <children>
+            <ImageView fitHeight="156.0" fitWidth="276.0" layoutY="24.0" pickOnBounds="true" preserveRatio="true" style="-fx-scale-y: 1.345;">
+               <image>
+                  <Image url="@../images/hotel3.jpg.jpg" />
+               </image>
+            </ImageView>
+            <JFXButton fx:id="cheak_cliend_details_of_customar" buttonType="RAISED" layoutX="68.0" layoutY="135.0" onAction="#cheak_cliend_details_of_customar_button" text="Check Cliend Details " textFill="#00ffaa">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="AddRoom" buttonType="RAISED" layoutX="68.0" layoutY="84.0" onAction="#addroom" prefHeight="25.0" prefWidth="130.0" text="Room Information" textFill="#03ffaa">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </JFXButton>
+            <Label layoutX="29.0" layoutY="28.0" opacity="0.71" text="Wellcome  !!!!" textFill="#0015ff">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <JFXButton fx:id="wellcomadminexit" buttonType="RAISED" layoutX="238.0" layoutY="1.0" onAction="#wellcomadminexitbutton" ripplerFill="#00ff29" text="X" textFill="RED">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </JFXButton>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="roomdetail" layoutX="52.0" layoutY="124.0" opacity="0.87" prefHeight="324.0" prefWidth="536.0" style="-fx-background-color: black;" visible="false">
+         <children>
+            <ImageView fitHeight="334.0" fitWidth="467.0" layoutX="34.0" pickOnBounds="true" preserveRatio="true" style="-fx-scale-x: 1.15;">
+               <image>
+                  <Image url="@../images/hotel2.jpg.jpg" />
+               </image>
+            </ImageView>
+            <Label layoutX="84.0" layoutY="84.0" prefHeight="17.0" prefWidth="77.0" text="Room No  :">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="80.0" layoutY="115.0" prefHeight="17.0" prefWidth="77.0" text="Room Rate :">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <JFXTextField fx:id="RoomNotext" focusColor="#0040ff" layoutX="192.0" layoutY="71.0" prefHeight="25.0" prefWidth="174.0" promptText="Room No" unFocusColor="#02ff39">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></JFXTextField>
+            <JFXTextField fx:id="RoomRate" focusColor="#0040ff" layoutX="192.0" layoutY="103.0" prefHeight="25.0" prefWidth="174.0" promptText="Room Rate" unFocusColor="#02ff39">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></JFXTextField>
+            <JFXButton fx:id="ShowRoomDetai" buttonType="RAISED" layoutX="374.0" layoutY="173.0" onAction="#ShowRoomDetailButton" ripplerFill="#ee0000" text="Show Room" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></JFXButton>
+            <JFXButton fx:id="Deletroom_by_customar" buttonType="RAISED" layoutX="366.0" layoutY="271.0" onAction="#Deletroom_by_customar_button" ripplerFill="#ee0000" text="Delet Room" textFill="WHITE" />
+            <JFXButton fx:id="AddRoombyAdmin" buttonType="RAISED" layoutX="67.0" layoutY="271.0" onAction="#AddRoombyAdminButton" ripplerFill="#ee0000" text="Add Room" textFill="WHITE" />
+            <JFXButton buttonType="RAISED" layoutX="209.0" layoutY="271.0" ripplerFill="#ee0000" text="Bill" textFill="WHITE" />
+            <JFXButton fx:id="addingRoomExit" buttonType="RAISED" layoutX="494.0" onAction="#addingRoomExitButton" ripplerFill="#00ff62" text="X" textFill="RED">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="vewroomdetail" buttonType="RAISED" layoutX="361.0" layoutY="221.0" onAction="#vewroomdetailbutton" ripplerFill="#04ff00" text="Vew room Detail" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </JFXButton>
+            <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="104.0" layoutY="197.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/i6.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="25.0" fitWidth="32.0" layoutX="102.0" layoutY="160.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/i7.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="23.0" fitWidth="25.0" layoutX="106.0" layoutY="234.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/i8.png" />
+               </image>
+            </ImageView>
+            <JFXComboBox fx:id="BedType" layoutX="157.0" layoutY="153.0" prefHeight="25.0" prefWidth="130.0" promptText="Bed Type" />
+            <JFXComboBox fx:id="City" layoutX="153.0" layoutY="186.0" prefHeight="25.0" prefWidth="135.0" promptText="City" />
+            <JFXComboBox fx:id="RoomType" layoutX="154.0" layoutY="234.0" prefHeight="25.0" prefWidth="134.0" promptText="Room Type" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="customardetail" layoutX="67.0" layoutY="122.0" opacity="0.84" prefHeight="324.0" prefWidth="526.0" style="-fx-background-color: black;" visible="false">
+         <children>
+            <ImageView fitHeight="324.0" fitWidth="484.0" layoutX="24.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true" style="-fx-scale-x: 1.1;">
+               <image>
+                  <Image url="@../images/hotel4.jpg.jpg" />
+               </image>
+            </ImageView>
+            <Label layoutX="80.0" layoutY="8.0" prefHeight="39.0" prefWidth="328.0" text="Please Enter Your Dtails" textFill="#a47e7e">
+               <font>
+                  <Font name="Segoe Print" size="25.0" />
+               </font>
+            </Label>
+            <Label layoutX="268.0" layoutY="111.0" prefHeight="17.0" prefWidth="77.0" text="Country " textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="24.0" layoutY="111.0" prefHeight="17.0" prefWidth="79.0" text="Last Name " textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="20.0" layoutY="142.0" prefHeight="17.0" prefWidth="56.0" text="Address" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="22.0" layoutY="179.0" prefHeight="17.0" prefWidth="73.0" text="Nationality" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="23.0" layoutY="79.0" prefHeight="17.0" prefWidth="73.0" text="First Name " textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="268.0" layoutY="79.0" prefHeight="17.0" prefWidth="41.0" text="City" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="268.0" layoutY="146.0" prefHeight="17.0" prefWidth="97.0" text="Phone Number " textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="269.0" layoutY="179.0" prefHeight="17.0" prefWidth="118.0" text="Mail Number" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <JFXRadioButton fx:id="male" layoutX="153.0" layoutY="225.0" text="Male" textFill="WHITE">
+               <font>
+                  <Font name="Segoe UI Black" size="12.0" />
+               </font>
+               <toggleGroup>
+                  <ToggleGroup fx:id="gender" />
+               </toggleGroup>
+            </JFXRadioButton>
+            <JFXRadioButton fx:id="female" layoutX="287.0" layoutY="225.0" text="Female" textFill="WHITE" toggleGroup="$gender">
+               <font>
+                  <Font name="Segoe UI Black" size="12.0" />
+               </font>
+            </JFXRadioButton>
+            <JFXButton fx:id="resetofdetail" buttonType="RAISED" layoutX="118.0" layoutY="258.0" onAction="#resetofdetailButton" ripplerFill="#ff061f" text="Reset" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="ref" buttonType="RAISED" layoutX="253.0" layoutY="258.0" onAction="#RegisterButton" ripplerFill="#08fc61" text="Register" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </JFXButton>
+            <JFXTextField fx:id="NameofCustomar" layoutX="95.0" layoutY="75.0" promptText="First Name">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></JFXTextField>
+            <JFXTextField fx:id="LastNameOfCustomar" layoutX="95.0" layoutY="105.0" promptText="Last Name">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></JFXTextField>
+            <JFXTextField fx:id="AdressOfCustomar" layoutX="95.0" layoutY="137.0" promptText="Address">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></JFXTextField>
+            <JFXTextField fx:id="NationalityOfCustomar" layoutX="96.0" layoutY="174.0" promptText="Nationality">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></JFXTextField>
+            <JFXTextField fx:id="CityOfCustomar" layoutX="375.0" layoutY="72.0" promptText="City">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></JFXTextField>
+            <JFXTextField fx:id="CountryOfCustomar" layoutX="373.0" layoutY="100.0" promptText="Country ">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></JFXTextField>
+            <JFXTextField fx:id="PhoneNuberOfCustomar" layoutX="373.0" layoutY="134.0" promptText="Pnone Number">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></JFXTextField>
+            <JFXTextField fx:id="mailOfCustomar" layoutX="373.0" layoutY="167.0" promptText="Mail Number">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></JFXTextField>
+            <JFXButton fx:id="CustomarDetailsExit" buttonType="RAISED" layoutX="484.0" onAction="#CustomarDetailsExitButton" ripplerFill="#00ff80" text="X" textFill="RED">
+               <font>
+                  <Font name="System Bold" size="21.0" />
+               </font>
+            </JFXButton>
+            <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="85.0" layoutY="225.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/i5.jpg" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="regsuccessfully" layoutX="111.0" layoutY="124.0" opacity="0.87" prefHeight="283.0" prefWidth="436.0" style="-fx-background-color: black;" visible="false">
+         <children>
+            <ImageView fitHeight="283.0" fitWidth="430.0" layoutX="13.0" pickOnBounds="true" preserveRatio="true" style="-fx-scale-x: 1.09;">
+               <image>
+                  <Image url="@../images/hotel5.jpg.jpg" />
+               </image>
+            </ImageView>
+            <Label layoutX="69.0" layoutY="42.0" prefHeight="17.0" prefWidth="157.0" text="Registation Successfully.." textFill="#06d351">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <JFXDatePicker defaultColor="#00ff5993" layoutX="148.0" layoutY="109.0" promptText="Cheak In Date" />
+            <JFXDatePicker defaultColor="#21c950" layoutX="147.0" layoutY="157.0" promptText="Cheak Out Date" />
+            <JFXButton buttonType="RAISED" layoutX="241.0" layoutY="226.0" prefHeight="25.0" prefWidth="104.0" ripplerFill="#0d00ff" text="Cheak Book">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </JFXButton>
+            <JFXButton buttonType="RAISED" layoutX="69.0" layoutY="224.0" ripplerFill="#0d00ff" text="Booked History">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="regsuccessfullyexit" buttonType="RAISED" layoutX="411.0" onAction="#regsuccessfullyexitButtton" ripplerFill="#00ff30" text="X" textFill="RED">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></JFXButton>
+            <JFXTimePicker defaultColor="#1eff00" layoutX="341.0" layoutY="109.0" prefHeight="25.0" prefWidth="65.0" promptText="cheakin" />
+            <JFXTimePicker defaultColor="#00ff2f" layoutX="343.0" layoutY="159.0" prefHeight="25.0" prefWidth="65.0" promptText="cheakout" />
+            <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="74.0" layoutY="112.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/i10.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="38.0" fitWidth="33.0" layoutX="72.0" layoutY="159.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/i11.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="76.0" layoutY="74.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/i12.png" />
+               </image>
+            </ImageView>
+            <JFXComboBox fx:id="EnterCity" layoutX="149.0" layoutY="74.0" prefHeight="25.0" prefWidth="145.0" promptText="Enter City" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="adid2" layoutX="131.0" layoutY="100.0" opacity="0.67" prefHeight="200.0" prefWidth="234.0" style="-fx-background-color: #ffb366;" visible="false">
+         <children>
+            <JFXButton fx:id="adid2loginexit" buttonType="RAISED" layoutX="210.0" layoutY="1.0" onAction="#adid2loginexitbutton" ripplerFill="RED" text="X" textFill="RED" />
+            <JFXButton fx:id="creatnewAccount1a" buttonType="RAISED" layoutX="57.0" layoutY="75.0" onAction="#creatnewAccount1aButton" text="Create new Account" />
+            <JFXButton fx:id="adid2login" layoutX="84.0" layoutY="118.0" onAction="#adid2loginButton" text="Log In" />
+            <Label layoutX="37.0" layoutY="29.0" prefHeight="17.0" prefWidth="118.0" text="Well Come  !!!!" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="cusld3" layoutX="198.0" layoutY="110.0" opacity="0.63" prefHeight="200.0" prefWidth="234.0" style="-fx-background-color: #ffb366;" visible="false">
+         <children>
+            <JFXButton fx:id="cusld3exit" buttonType="RAISED" layoutX="210.0" layoutY="-1.0" onAction="#cusld3exitButton" ripplerFill="#00ff2f" text="X" textFill="RED" />
+            <JFXButton fx:id="Creatanewaccout" buttonType="RAISED" layoutX="52.0" layoutY="63.0" onAction="#CreatanewaccoutButton" ripplerFill="#02ff31" text="Create a new account" />
+            <JFXButton fx:id="cusld3login" buttonType="RAISED" layoutX="76.0" layoutY="100.0" onAction="#cusld3loginButton" ripplerFill="BLACK" text="Log In" />
+            <Label fx:id="Authoritylable" layoutX="28.0" layoutY="26.0" prefHeight="17.0" prefWidth="111.0" text="Wellcome to !!!!" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="ChoiceYourroompan" layoutX="56.0" layoutY="134.0" opacity="0.63" prefHeight="200.0" prefWidth="226.0" style="-fx-background-color: #ff9c33;" visible="false">
+         <children>
+            <JFXButton fx:id="Superior" buttonType="RAISED" layoutX="59.0" layoutY="63.0" onAction="#SuperiorButton" ripplerFill="#00ff40" text="Superior" textFill="WHITE" />
+            <JFXButton fx:id="deluxx" buttonType="RAISED" layoutX="60.0" layoutY="100.0" onAction="#deluxButton" ripplerFill="#00ff3c" text="Deluxe" textFill="WHITE" />
+            <JFXButton fx:id="Connectingid" layoutX="60.0" layoutY="139.0" onAction="#ConnectingButton" ripplerFill="#00ff5e" text="Connecting" textFill="WHITE" />
+            <Label layoutX="26.0" layoutY="32.0" prefHeight="23.0" prefWidth="123.0" text="Choice  Your Room" textFill="WHITE" />
+            <JFXButton fx:id="choiceroomexit" buttonType="RAISED" layoutX="200.0" onAction="#choiceroomexitButton" ripplerFill="#00ff3c" text="X" textFill="WHITE" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="superior" layoutX="85.0" layoutY="147.0" opacity="0.9" prefHeight="227.0" prefWidth="497.0" style="-fx-background-color: #bfbfbf;" visible="false">
+         <children>
+            <JFXButton fx:id="superiorExit" buttonType="RAISED" layoutX="486.0" layoutY="1.0" onAction="#superiorExitButton" ripplerFill="#00ff3c" text="X" textFill="RED" />
+            <ImageView fitHeight="144.0" fitWidth="285.0" layoutY="43.0" pickOnBounds="true" preserveRatio="true" style="-fx-scale-y: 1.587;">
+               <image>
+                  <Image url="@../images/hotel6.jpg.jpg" />
+               </image>
+            </ImageView>
+            <JFXTextArea focusColor="#ff3300" layoutX="290.0" layoutY="40.0" prefHeight="148.0" prefWidth="215.0" style="-fx-border-color: #4dff4d;" text="Superior&#10;&#10; Enjoy the  brillent of the city &#10;Sky Line from one of our Superior Rooms.They are sapacious and Comfortable , With a large living area (39sqm) $2,000 per night." unFocusColor="#4f00ff">
+               <font>
+                  <Font name="Yu Gothic Medium" size="12.0" />
+               </font></JFXTextArea>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="delux" layoutX="85.0" layoutY="148.0" opacity="0.91" prefHeight="231.0" prefWidth="536.0" style="-fx-background-color: #bfbfbf;" visible="false">
+         <children>
+            <JFXButton fx:id="Deluxexit" buttonType="RAISED" layoutX="502.0" layoutY="2.0" onAction="#deluxexitbutton" ripplerFill="#00ff3c" text="X" textFill="RED" />
+            <ImageView fitHeight="128.0" fitWidth="338.0" layoutY="52.0" pickOnBounds="true" preserveRatio="true" style="-fx-scale-y: 1.8;">
+               <image>
+                  <Image url="@../images/hotel7.jpg.jpg" />
+               </image>
+            </ImageView>
+            <JFXTextArea focusColor="RED" layoutX="311.0" layoutY="29.0" prefHeight="175.0" prefWidth="215.0" style="-fx-border-color: #4dff4d;" text="Delux&#10;&#10; Available in both twin bed          (38sqm) and king size bed (40sqm)  options.The Delux room oftens you   a spacious living area,compleate with all the modern amenities to  fulfill yours stay requirments $2,500 per night" unFocusColor="LIME">
+               <font>
+                  <Font name="Yu Gothic Medium" size="12.0" />
+               </font>
+            </JFXTextArea>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="Connecting" layoutX="81.0" layoutY="150.0" opacity="0.9" prefHeight="227.0" prefWidth="510.0" style="-fx-background-color: #bfbfbf;" visible="false">
+         <children>
+            <JFXButton fx:id="connectingexit" buttonType="RAISED" layoutX="486.0" layoutY="1.0" onAction="#connectingexitButton" ripplerFill="#00ff3c" text="X" textFill="RED" />
+            <ImageView fitHeight="220.0" fitWidth="353.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true" style="-fx-scale-y: 1.03;">
+               <image>
+                  <Image url="@../images/hotel8.jpg.jpeg" />
+               </image>
+            </ImageView>
+            <JFXTextArea focusColor="RED" layoutX="299.0" layoutY="28.0" prefHeight="175.0" prefWidth="206.0" style="-fx-border-color: #4dff4d;" text="Connecting &#10;&#10;An ideal way to stay in Bangkok as a family.The President &#10;Place Connecting Rooms have two well-appointed inter-connection rooms with a combined area of 76 sqm to 80 sqm $4,000 per night." unFocusColor="#00ff33">
+               <font>
+                  <Font name="Yu Gothic Medium" size="12.0" />
+               </font>
+            </JFXTextArea>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="creatnewAccountadmin" layoutX="97.0" layoutY="110.0" opacity="0.69" prefHeight="331.0" prefWidth="268.0" style="-fx-background-color: #0069bd;" visible="false">
+         <children>
+            <Label layoutX="28.0" layoutY="69.0" prefHeight="25.0" prefWidth="68.0" text="First Name" textFill="WHITE" wrapText="true" />
+            <Label layoutX="28.0" layoutY="100.0" prefHeight="25.0" prefWidth="68.0" text="Last Name" textFill="WHITE" wrapText="true" />
+            <Label layoutX="28.0" layoutY="137.0" prefHeight="25.0" prefWidth="68.0" text="User Name" textFill="WHITE" wrapText="true" />
+            <Label layoutX="28.0" layoutY="174.0" prefHeight="25.0" prefWidth="68.0" text="Password" textFill="WHITE" wrapText="true" />
+            <Label layoutX="28.0" layoutY="214.0" prefHeight="25.0" prefWidth="77.0" text="Re-type Pass" textFill="WHITE" wrapText="true" />
+            <JFXButton fx:id="AdminReset" layoutX="39.0" layoutY="269.0" onAction="#AdminResetButton" ripplerFill="#ebebeb" text="Reset" textFill="WHITE" />
+            <JFXButton fx:id="admincreatnewaccclogin" layoutX="151.0" layoutY="269.0" onAction="#admincreatnewacccloginButton" text="Submit" textFill="WHITE" />
+            <JFXButton fx:id="CreatenewExit" layoutX="241.0" layoutY="3.0" onAction="#CreatenewExitButton" text="X" />
+            <JFXTextField fx:id="AdminFirstName" focusColor="#00ff59" layoutX="119.0" layoutY="69.0" promptText="First Name" unFocusColor="WHITE" />
+            <JFXTextField fx:id="AdminLastname" focusColor="#00ff22" layoutX="119.0" layoutY="100.0" promptText="Last Name" unFocusColor="WHITE" />
+            <JFXTextField fx:id="AdminUserName" focusColor="#00ff11" layoutX="119.0" layoutY="137.0" promptText="Example@gmail.com" unFocusColor="WHITE" />
+            <JFXTextField fx:id="AdminPassWord" focusColor="#00ff90" layoutX="119.0" layoutY="174.0" promptText="Password" unFocusColor="WHITE" />
+            <JFXTextField fx:id="AdminResetPassword" focusColor="#00ff48" layoutX="119.0" layoutY="214.0" promptText="ReType Pass" unFocusColor="WHITE" />
+            <Label layoutX="46.0" layoutY="28.0" prefHeight="21.0" prefWidth="171.0" text="Admin Create A New Account" textFill="WHITE" />
+         </children></AnchorPane>
+      <AnchorPane fx:id="customarnewaccountacpane" layoutX="403.0" layoutY="110.0" opacity="0.69" prefHeight="346.0" prefWidth="268.0" style="-fx-background-color: #0069bd;" visible="false">
+         <children>
+            <Label layoutX="28.0" layoutY="69.0" prefHeight="25.0" prefWidth="68.0" text="First Name" textFill="WHITE" wrapText="true" />
+            <Label layoutX="28.0" layoutY="100.0" prefHeight="25.0" prefWidth="68.0" text="Last Name" textFill="WHITE" wrapText="true" />
+            <Label layoutX="28.0" layoutY="137.0" prefHeight="25.0" prefWidth="68.0" text="User Name" textFill="WHITE" wrapText="true" />
+            <Label layoutX="28.0" layoutY="174.0" prefHeight="25.0" prefWidth="68.0" text="Password" textFill="WHITE" wrapText="true" />
+            <Label layoutX="28.0" layoutY="214.0" prefHeight="25.0" prefWidth="77.0" text="Re-type Pass" textFill="WHITE" wrapText="true" />
+            <JFXButton fx:id="CustomarReset" layoutX="39.0" layoutY="298.0" onAction="#CustomarResetButton" ripplerFill="#ebebeb" text="Reset" textFill="WHITE" />
+            <JFXButton fx:id="loginofcustomarnewaccount" layoutX="151.0" layoutY="299.0" onAction="#loginofcustomarnewaccountButton" text="Submit" textFill="WHITE" />
+            <JFXButton layoutX="241.0" layoutY="3.0" onAction="#xberofcustomarnewaccButton" text="X" fx:id="xberofcustomarnewacc" />
+            <JFXTextField fx:id="CustomarFirstName" focusColor="#00ff1e" layoutX="119.0" layoutY="69.0" promptText="First Name" unFocusColor="WHITE" />
+            <JFXTextField fx:id="CustomarLastName" focusColor="#00ff22" layoutX="119.0" layoutY="100.0" promptText="Last Name" unFocusColor="WHITE" />
+            <JFXTextField fx:id="CustomarUserName" focusColor="#00ff48" layoutX="119.0" layoutY="137.0" promptText="Example@gmail.com" unFocusColor="WHITE" />
+            <JFXTextField fx:id="CustomarPassword" focusColor="#00ff11" layoutX="119.0" layoutY="174.0" promptText="Password" unFocusColor="WHITE" />
+            <JFXTextField fx:id="CustomarRetypePassword" focusColor="#00ff40" layoutX="119.0" layoutY="214.0" promptText="ReType Pass" unFocusColor="WHITE" />
+            <Label layoutX="46.0" layoutY="28.0" prefHeight="21.0" prefWidth="171.0" text="Customar Create A New Account" textFill="WHITE" />
+            <Label layoutX="45.0" layoutY="262.0" prefHeight="17.0" prefWidth="33.0" text="Age" textFill="WHITE" />
+            <JFXComboBox fx:id="Age" layoutX="119.0" layoutY="258.0" promptText="Age" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="Authoritypan" layoutX="69.0" layoutY="129.0" opacity="0.57" prefHeight="216.0" prefWidth="191.0" style="-fx-background-color: #1a53ff;" visible="false">
+         <children>
+            <JFXButton fx:id="Admin1" layoutX="51.0" layoutY="41.0" onAction="#Admin1Button" ripplerFill="#0011ff" text="Admin" textFill="WHITE" />
+            <JFXButton fx:id="Manager" layoutX="51.0" layoutY="96.0" onAction="#ManagerButton" ripplerFill="#0011ff" text="Manager" textFill="WHITE" />
+            <JFXButton fx:id="Employee" layoutX="49.0" layoutY="143.0" onAction="#EmployeeButton" ripplerFill="#0011ff" text="Employee" textFill="WHITE" />
+            <JFXButton fx:id="exitofAuthority" layoutX="166.0" layoutY="1.0" onAction="#exitofAuthorityButton" text="X" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="CustomarTypePan" layoutX="353.0" layoutY="129.0" opacity="0.67" prefHeight="216.0" prefWidth="191.0" style="-fx-background-color: #1a53ff;" visible="false">
+         <children>
+            <JFXButton fx:id="LocalCustomar1" layoutX="49.0" layoutY="61.0" onAction="#LocalCustomar1Button" text="Local Customar" textFill="WHITE" />
+            <JFXButton fx:id="ForeignCustomar" layoutX="42.0" layoutY="114.0" onAction="#ForeignCustomarButton" text="Foreing Customar" textFill="WHITE" />
+            <JFXButton fx:id="CustomarTypeExit" layoutX="167.0" layoutY="3.0" onAction="#CustomarTypeExitButton" text="x" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="customartableacpane" layoutX="152.0" layoutY="129.0" opacity="0.57" prefHeight="339.0" prefWidth="550.0" style="-fx-background-color: gray;" visible="false">
+         <children>
+            <TableView fx:id="customar_table_info" layoutY="27.0" prefHeight="312.0" prefWidth="550.0">
+              <columns>
+                <TableColumn fx:id="c_first_name" prefWidth="75.0" text="First Name" />
+                <TableColumn fx:id="c_last_name" prefWidth="67.0" text="Last Name" />
+                  <TableColumn fx:id="c_address" prefWidth="69.0" text="Address" />
+                  <TableColumn fx:id="c_nationality" prefWidth="74.0" text="Nationality " />
+                  <TableColumn fx:id="c_city" text="City " />
+                  <TableColumn fx:id="c_country" prefWidth="89.0" text="Country" />
+                  <TableColumn fx:id="c_mail" prefWidth="93.0" text="Mail" />
+              </columns>
+            </TableView>
+            <JFXButton fx:id="customar_table_exit" layoutX="524.0" layoutY="2.0" onAction="#customar_table_exit_buttion" ripplerFill="RED" text="x" textFill="#390808">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></JFXButton>
+            <Label layoutX="188.0" layoutY="6.0" prefHeight="15.0" prefWidth="182.0" text="Customar Detail's List" textFill="#ff0080">
+               <font>
+                  <Font name="Bookman Old Style Bold Italic" size="13.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="AdminTableAnPane" layoutX="388.0" layoutY="119.0" prefHeight="312.0" prefWidth="293.0" style="-fx-background-color: gray;" visible="false">
+         <children>
+            <TableView fx:id="AdminTable" layoutY="36.0" prefHeight="295.0" prefWidth="293.0">
+              <columns>
+                <TableColumn fx:id="AdminTableFirstName" prefWidth="81.0" text="First Name" />
+                <TableColumn fx:id="AdminTableLatName" prefWidth="76.0" text="Last Name" />
+                  <TableColumn fx:id="AdminTableUserName" prefWidth="135.0" text="User Name " />
+              </columns>
+            </TableView>
+            <JFXButton fx:id="TableExit" layoutX="271.0" layoutY="2.0" onAction="#TableExitButton" text="x" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="CustomarTableAncorePane" layoutX="69.0" layoutY="139.0" opacity="0.57" prefHeight="324.0" prefWidth="285.0" style="-fx-background-color: gray;" visible="false">
+         <children>
+            <TableView fx:id="CustomarViewTable" layoutX="-1.0" layoutY="27.0" prefHeight="302.0" prefWidth="285.0">
+              <columns>
+                <TableColumn fx:id="CustomarTableFirstName" prefWidth="89.0" text="First Name" />
+                <TableColumn fx:id="CustomarTableLastName" prefWidth="94.0" text="Last Name" />
+                  <TableColumn fx:id="CustomarUserNameTable" prefWidth="101.0" text="User Name" />
+              </columns>
+            </TableView>
+            <JFXButton fx:id="CustomarTableExit" layoutX="257.0" layoutY="2.0" onAction="#CustomarTableExitButton" prefHeight="25.0" prefWidth="25.0" text="X" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="delet_room_acpane" layoutX="160.0" layoutY="110.0" opacity="0.72" prefHeight="226.0" prefWidth="246.0" style="-fx-background-color: gray;" visible="false">
+         <children>
+            <JFXButton fx:id="delet_room" layoutX="84.0" layoutY="137.0" onAction="#delet_room_button1" text="Delet Room" />
+            <JFXTextField fx:id="room_no_text" focusColor="#4360b5" layoutX="52.0" layoutY="67.0" promptText="Enter Room Number" unFocusColor="WHITE" />
+            <JFXButton fx:id="delet_room_exit" layoutX="217.0" layoutY="3.0" onAction="#delet_room_exit_button" text="X" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="room_detail_ancore_pan" layoutX="116.0" layoutY="130.0" opacity="0.56" prefHeight="331.0" prefWidth="504.0" style="-fx-background-color: gray;" visible="false">
+         <children>
+            <TableView fx:id="show_room_detail_table" layoutX="-2.0" layoutY="30.0" prefHeight="302.0" prefWidth="510.0">
+              <columns>
+                <TableColumn fx:id="room_no_colam" prefWidth="100.0" text="Room No" />
+                <TableColumn fx:id="room_rate_colam" prefWidth="104.0" text="Room Rate" />
+                  <TableColumn fx:id="bed_type_colom" prefWidth="96.0" text="Bed Type" />
+                  <TableColumn fx:id="city_colam" prefWidth="108.0" text="City " />
+                  <TableColumn fx:id="room_type_colom" prefWidth="101.0" text="Room Type" />
+              </columns>
+            </TableView>
+            <JFXButton fx:id="view_room_detail_exit" layoutX="481.0" layoutY="2.0" onAction="#view_room_detail_exit_button" text="X" />
+            <Label layoutX="193.0" layoutY="4.0" text="Room Detail's" textFill="#ff00d0">
+               <font>
+                  <Font name="Monotype Corsiva" size="16.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

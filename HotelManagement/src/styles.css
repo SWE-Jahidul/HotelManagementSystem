@@ -1,0 +1,73 @@
+.button
+{    
+    -fx-background-color: white ;
+    -fx-font-size:12px;
+    -fx-text-fill: black;
+    -fx-background-radius: 12px;
+}
+.button:hover
+{
+    -fx-font-weight :bold;
+    -fx-background-color: white;
+    -fx-background-radius: 5px;
+    -fx-font-size:11px;
+    -fx-text-fill: #00ff43;
+    -fx-border-color: #7b1fa2;
+    -fx-border-insets: 5px;
+    -fx-border-width: 3px;
+    -fx-border-style:dashed;
+    -fx-border-radius: 12px;
+}
+.button:pressed
+{
+    -fx-font-weight :bold;
+    -fx-background-color: white;
+    -fx-background-radius: 12px;
+    -fx-font-size:13;
+    -fx-text-fill: #2196f3;
+    -fx-border-color: #7b1fa2;
+    -fx-border-insets: 5px;
+    -fx-border-width: 3px;
+    -fx-border-style:dashed;
+    -fx-border-radius: 17px;
+    -fx-rotate:1;
+}
+#Customarusername2,
+#Customarpasswordtest2,
+#AdminUserNmae2,
+#AdminUserpassword2,
+#CustomarFirstName,
+#CustomarLastName,
+#CustomarUserName,
+#CustomarPassword,
+#CustomarRetypePassword
+{
+  -fx-text-fill: white;
+}
+#AdminFirstName,
+#AdminLastname,
+#AdminUserName,
+#AdminPassWord,
+#AdminResetPassword
+{
+    -fx-text-fill: white;
+}
+#RoomNotext,
+#RoomTypetext{
+     -fx-text-fill: white;
+}
+
+#NameofCustomar,
+#LastNameOfCustomar,
+#AdressOfCustomar,
+#NationalityOfCustomar,
+#CityOfCustomar,
+#CountryOfCustomar,
+#PhoneNuberOfCustomar,
+#mailOfCustomar
+{
+        -fx-text-fill: white;
+}
+#Age{
+    -fx-text-fill: white;
+}
